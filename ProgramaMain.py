@@ -4,7 +4,6 @@ import os
 produtos = []
 token = None
 
-
 def limpartela():
     if os.name == 'nt':
         os.system('cls')
