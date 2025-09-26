@@ -81,10 +81,10 @@ def obter_cotacao_yuan():
 def conversorprodutos():
     cotacao = obter_cotacao_yuan()
     if cotacao:
-        print("\nPreços convertidos para BRL:")
+        print("\nPreços convertidos para R$:")
         for p in produtos:
-            preco_brl = p["preco"] * cotacao
-            print(f"{p['nome']} custa {preco_brl:.2f} BRL ({p['preco']} ¥)")
+            preco_brl = p["preco"] + p["freteint"] * cotacao
+            print(f"{p['nome']} custa {preco_brl:.2f} R$ ({p['preco']}, {p['freteint']} ¥) com frete local imbutido")
         print()
 
 def conversorvalor():
@@ -92,7 +92,7 @@ def conversorvalor():
     if cotacao:
         valor = float(input("Qual valor em ¥ você deseja converter: "))
         valor = valor * cotacao
-        print(f"\nO valor convertido é: {valor:.2f}R$")
+        print(f"\nO valor convertido é: R${valor:.2f}")
 
 def freteManual():
     print("\nCalculando frete manualmente:")
