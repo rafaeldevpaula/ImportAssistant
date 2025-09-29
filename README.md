@@ -12,6 +12,6 @@ Programa que auxilia nos cálculos referentes à importação de produtos da Chi
 
 ## Dependências
 
-- Desenvolvido em Python 3.11+
+- Desenvolvido em Python
 - Biblioteca utilizada: `requests`
 - É necessário possuir um Token Wise para obter a cotação do yuan.
